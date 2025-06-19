@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style/main.css" />
+    <style>
+      body {
+        height: 100vh;
+        margin: 0;
+        justify-content: center;
+        background-image: url("assets/bacteria.jpg"); /* Check if this file actually exists */
+        background-size: cover;
+        background-position: center;
+      }
+
+      canvas {
+        display: block;
+        margin: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="game" style="position: relative; width: fit-content; margin: auto;"></canvas>
+
+    
+
+    <!-- Use CDN for p5.js -->
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.6.0/lib/p5.min.js"></script>
+
+    <script>
+      // prevent itch.io scrolling
+      window.addEventListener("keydown", (e) => {
+        if (
+          ["ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight", " "].includes(
+            e.key
+          )
+        ) {
+          e.preventDefault();
+        }
+      });
+    </script>
+
+  <div id="post-battle-buttons" class="hidden">
+    <button id="keep-fighting-btn">Keep Fighting</button>
+    <button id="go-to-scoreboard-btn">Scoreboard</button>
+  </div>
+
+    <!-- Your main JS file inside the js folder -->
+    <script type="module" src="js/main.js"></script>
+
+    <div id="attack-buttons" class="hidden">
+      <div class="attack-category">
+        <button class="category-button" data-category="penicillins">Penicillins</button>
+        <div class="subcategory hidden" data-category="penicillins">
+          <button class="subattack" data-antibiotic-name="amox_clav">Amoxicillin</button>
+          <button class="subattack" data-antibiotic-name="ampicillin">Ampicillin</button>
+          <button class="subattack" data-antibiotic-name="ceftriaxzone">Ceftriaxone</button>
+        </div>
+      </div>
+    
+      <div class="attack-category">
+        <button class="category-button" data-category="quinolones">Quinolones</button>
+        <div class="subcategory hidden" data-category="quinolones">
+          <button class="subattack" data-antibiotic-name="ciprofloxacin">Ciprofloxacin</button>
+          <button class="subattack" data-antibiotic-name="levofloxacin">Levofloxacin</button>
+        </div>
+      </div>
+    
+      <div class="attack-category">
+        <button class="category-button" data-category="30s-inhibitors">30S inhibitors</button>
+        <div class="subcategory hidden" data-category="30s-inhibitors">
+          <button class="subattack" data-antibiotic-name="doxycycline">Tetracycline</button>
+          <button class="subattack" data-antibiotic-name="doxycycline">Doxycycline</button>
+        </div>
+      </div>
+    
+      <div class="attack-category">
+        <button class="category-button" data-category="macrolide">Macrolide</button>
+        <div class="subcategory hidden" data-category="macrolide">
+          <button class="subattack" data-antibiotic-name="erythromycin">Azithromycin</button>
+        </div>
+      </div>
+
+      
+    
+      <!-- Add more categories as needed, ensuring data-category values are consistent -->
+    </div>
+    
+      
+
+    <div id="attack-buttons" class="hidden">
+        <button id="btn-1">Attack 1</button>
+        <button id="btn-2">Attack 2</button>
+        <button id="btn-3">Attack 3</button>
+        <button id="btn-4">Attack 4</button>
+    </div>
+      
+  </body>
+</html>
