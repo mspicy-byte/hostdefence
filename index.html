@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style/main.css" />
+    <style>
+      body {
+        height: 100vh;
+        margin: 0;
+        justify-content: center;
+        background-image: url("assets/bacteria.jpg"); /* Check if this file actually exists */
+        background-size: cover;
+        background-position: center;
+      }
+
+      canvas {
+        display: block;
+        margin: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="game" style="position: relative; width: fit-content; margin: auto;"></canvas>
+
+    
+
+    <!-- Use CDN for p5.js -->
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.6.0/lib/p5.min.js"></script>
+
+    <script>
+      // prevent itch.io scrolling
+      window.addEventListener("keydown", (e) => {
+        if (
+          ["ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight", " "].includes(
+            e.key
+          )
+        ) {
+          e.preventDefault();
+        }
+      });
+    </script>
+
+  <div id="post-battle-buttons" class="hidden">
+    <button id="keep-fighting-btn">Keep Fighting</button>
+    <button id="go-to-scoreboard-btn">Scoreboard</button>
+  </div>
+
+    <!-- Your main JS file inside the js folder -->
+    <script type="module" src="js/main.js"></script>
+
+    <div id="attack-buttons" class="hidden">
+
+      <!-- Cell Wall Synthesis Inhibitors -->
+      <div class="attack-category">
+        <button class="category-button" data-category="cell-wall">Cell Wall Synthesis</button>
+        <div class="subcategory hidden" data-category="cell-wall">
+          <button class="subattack" data-antibiotic-name="penicillin">Penicillin</button>
+          <button class="subattack" data-antibiotic-name="amoxicillin">Amoxicillin</button>
+          <button class="subattack" data-antibiotic-name="amox_clav">Amox/Clav</button>
+          <button class="subattack" data-antibiotic-name="ampicillin">Ampicillin</button>
+          <button class="subattack" data-antibiotic-name="cloxacillin">Cloxacillin</button>
+          <button class="subattack" data-antibiotic-name="pip_tazo">Pip/Tazo</button>
+          <button class="subattack" data-antibiotic-name="cefazolin">Cefazolin</button>
+          <button class="subattack" data-antibiotic-name="cephalexin">Cephalexin</button>
+          <button class="subattack" data-antibiotic-name="ceftriaxone">Ceftriaxone</button>
+          <button class="subattack" data-antibiotic-name="ceftazidime">Ceftazidime</button>
+          <button class="subattack" data-antibiotic-name="ertapenem">Ertapenem</button>
+          <button class="subattack" data-antibiotic-name="meropenem">Meropenem</button>
+          <button class="subattack" data-antibiotic-name="vancomycin">Vancomycin</button>
+        </div>
+      </div>
+    
+      <!-- Protein Synthesis Inhibitors (30S) -->
+      <div class="attack-category">
+        <button class="category-button" data-category="30s-inhibitors">Protein Synthesis (30S)</button>
+        <div class="subcategory hidden" data-category="30s-inhibitors">
+          <button class="subattack" data-antibiotic-name="doxycycline">Doxycycline</button>
+          <button class="subattack" data-antibiotic-name="gentamicin">Gentamicin</button>
+          <button class="subattack" data-antibiotic-name="tobramycin">Tobramycin</button>
+        </div>
+      </div>
+    
+      <!-- Protein Synthesis Inhibitors (50S) -->
+      <div class="attack-category">
+        <button class="category-button" data-category="50s-inhibitors">Protein Synthesis (50S)</button>
+        <div class="subcategory hidden" data-category="50s-inhibitors">
+          <button class="subattack" data-antibiotic-name="erythromycin">Erythromycin</button>
+          <button class="subattack" data-antibiotic-name="clindamycin">Clindamycin</button>
+        </div>
+      </div>
+    
+      <!-- DNA Synthesis Inhibitors -->
+      <div class="attack-category">
+        <button class="category-button" data-category="dna-synthesis">DNA Synthesis Inhibitors</button>
+        <div class="subcategory hidden" data-category="dna-synthesis">
+          <button class="subattack" data-antibiotic-name="ciprofloxacin">Ciprofloxacin</button>
+          <button class="subattack" data-antibiotic-name="levofloxacin">Levofloxacin</button>
+          <button class="subattack" data-antibiotic-name="nitrofurantoin">Nitrofurantoin</button>
+          <button class="subattack" data-antibiotic-name="sxt_tmp">SXT/TMP</button>
+        </div>
+      </div>
+    
+    </div>
+    
+    
+      
+
+    
+      
+  </body>
+</html>
