@@ -106,6 +106,7 @@ export function makeBattle(p) {
         { name: "amox_clav", display: "Amoxicillin", power: 10 },
         { name: "ampicillin", display: "Ampicillin", power: 10 },
         { name: "ceftriaxzone", display: "Ceftriaxone", power: 10 },
+        { name: "cloxacillin", display: "Cloxacillin", power: 10 },
         { name: "ciprofloxacin", display: "Ciprofloxacin", power: 10 },
         { name: "levofloxacin", display: "Levofloxacin", power: 10 },
         { name: "doxycycline", display: "Tetracycline", power: 10 },
@@ -113,6 +114,9 @@ export function makeBattle(p) {
         { name: "erythromycin", display: "Azithromycin", power: 10 },
         // Ensure all possible antibiotics from your HTML buttons are listed here
         // with their corresponding `name` (JSON key) and `display` text.
+
+
+        
         // Add more as per your full HTML structure:
         // { name: "nitrofurantoin", display: "Nitrofurantoin", power: 30 },
         // { name: "cefazolin", display: "Cefazolin", power: 40 },
