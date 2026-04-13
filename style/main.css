@@ -46,7 +46,7 @@ button {
 /* Main Attack Buttons Container */
 #attack-buttons {
   position: absolute;
-  bottom: 400px; /* Position it 20px from the bottom of its *positioned* parent */
+  bottom: 100px; /* Position it 20px from the bottom of its *positioned* parent */
   left: 50%;
   transform: translateX(-50%); /* Only translate X to center horizontally */
   display: flex; /* Default display when visible */
