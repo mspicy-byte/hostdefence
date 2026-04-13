@@ -117,16 +117,16 @@ export function makeBattle(p) {
 
         
         // Add more as per your full HTML structure:
-        // { name: "cloxacillin", display: "Cloxacillin", power: 10 },
-        // { name: "nitrofurantoin", display: "Nitrofurantoin", power: 30 },
-        // { name: "cefazolin", display: "Cefazolin", power: 40 },
-        // { name: "tmp_smx", display: "TMP-SMX", power: 50 },
-        // { name: "gentamycin", display: "Gentamycin", power: 55 },
-        // { name: "tobramycin", display: "Tobramycin", power: 55 },
-        // { name: "ertapenum", display: "Ertapenum", power: 60 },
-        // { name: "meropenum", display: "Meropenum", power: 65 },
-        // { name: "clindamycin", display: "Clindamycin", power: 45 },
-        // { name: "vancomycin", display: "Vancomycin", power: 45 },
+         { name: "cloxacillin", display: "Cloxacillin", power: 10 },
+         { name: "nitrofurantoin", display: "Nitrofurantoin", power: 30 },
+         { name: "cefazolin", display: "Cefazolin", power: 40 },
+         { name: "tmp_smx", display: "TMP-SMX", power: 50 },
+         { name: "gentamycin", display: "Gentamycin", power: 55 },
+         { name: "tobramycin", display: "Tobramycin", power: 55 },
+         { name: "ertapenum", display: "Ertapenum", power: 60 },
+         { name: "meropenum", display: "Meropenum", power: 65 },
+         { name: "clindamycin", display: "Clindamycin", power: 45 },
+         { name: "vancomycin", display: "Vancomycin", power: 45 },
       ],
       makeDataBox(510, 220, 38, 30, 136, 40)
     ),
